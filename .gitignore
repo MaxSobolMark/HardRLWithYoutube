@@ -1,0 +1,11 @@
+/summaries
+/models
+.mypy_cache
+__pycache__
+videos/
+stats*.data
+.vs
+featurizers
+embeddings
+*.pyproj
+*.sln
