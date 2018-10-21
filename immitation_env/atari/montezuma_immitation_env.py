@@ -1,6 +1,5 @@
 ﻿import gym
 from .. import ImmitationWrapper
-#from .. import featurizer
 from TDCFeaturizer import TDCFeaturizer
 from train_featurizer import generate_dataset
 
