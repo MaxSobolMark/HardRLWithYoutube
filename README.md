@@ -55,7 +55,7 @@ Then run the following script:
 from baselines import run
 args = run.main({
     'alg': 'ppo2',
-    'env': 'MontezumaRevengeNoFrameskip-v4',
+    'env': 'MontezumaImmitationNoFrameskip-v4',
     'num_timesteps': 1e7,
     'load_path': None,
     'save_path': './models/montezuma_immitation_ppo',
