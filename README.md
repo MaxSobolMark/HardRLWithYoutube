@@ -23,9 +23,19 @@ First create a directory `embeddings/montezuma`, and then run the following pyth
 
 ```
 from train_featurizer import generate_dataset
+from TDCFeaturizer import TDCFeaturizer
 from embedding_visualization import visualize_embeddings
 
 d = generate_dataset('montezuma.txt', 6, 84, 84)
+featurizer_class = TDCFeaturizer
+initial_width = 92
+initial_height = 92
+desired_width = 84
+desired_height = 84
+learning_rate = 0.0001
+featurizer_save_path = 'montezuma'
+featurizer = featurizer_class(initial_width, initial_height, desired_width, desired_height, feature_vector_size=1024, learning_rate=learning_rate, experiment_name='default')
+featurizer.load(featurizer_save_path)
 features1 = featurizer.featurize(d[0])
 features2 = featurizer.featurize(d[1])
 features3 = featurizer.featurize(d[2])
